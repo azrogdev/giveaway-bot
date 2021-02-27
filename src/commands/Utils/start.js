@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 const ms = require("ms")
 module.exports.run = (client, message, args) => {
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous devez avoir la permission `MANAGE_MESSAGES` pour utiliser cette commande")
     let Color = message.guild.me.roles.highest.hexColor
     let Host = message.author.id
     let GiveawayChannel = message.mentions.channels.first()
