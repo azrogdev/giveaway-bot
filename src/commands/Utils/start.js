@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 const ms = require("ms")
 module.exports.run = (client, message, args) => {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous devez avoir la permission `MANAGE_MESSAGES` pour utiliser cette commande")
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Vous devez avoir la permission `MANAGE MESSAGES` pour faire cette commande")
     let Color = message.guild.me.roles.highest.hexColor
     let Host = message.author.id
     let GiveawayChannel = message.mentions.channels.first()
@@ -31,7 +31,7 @@ GiveawayChannel.send("🎉 **GIVEAWAY** 🎉").then((message) => {
     message.edit(embed)
     setTimeout(() => {
     if(message.reactions.cache.get("🎉").count <= winners){
-        
+        console.log("1")
         const embed1 = new MessageEmbed()
     .setColor(Color)
     .setDescription([
@@ -39,7 +39,7 @@ GiveawayChannel.send("🎉 **GIVEAWAY** 🎉").then((message) => {
     ])
     message.edit(embed1)
     }
-   
+    console.log("2")
         var array = []
     var i = winners - 1
     while(array.length <= i){
@@ -48,10 +48,10 @@ GiveawayChannel.send("🎉 **GIVEAWAY** 🎉").then((message) => {
         if(idx > -1){
             array.push(winner)
             array.pop()
-            
+            console.log(array)
         } else {
             array.push(winner)
-            
+            console.log(array)
         }
         
         const embed2 = new MessageEmbed()
@@ -72,7 +72,7 @@ GiveawayChannel.send("🎉 **GIVEAWAY** 🎉").then((message) => {
 }
 module.exports.help = {
     name: "start",
-    description: "Renvoie pong",
+    description: "Crée un giveaway",
     args: true,
     usage: "<salon> <durée> <gagnants> <prix>"
 }
