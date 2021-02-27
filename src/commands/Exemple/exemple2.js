@@ -1,7 +1,7 @@
 // Dexuième utilisation : 
 module.exports.run = (client, message, args) => {
   if(!args[0]) return
-    message.channel.send("un exemple...!" + `args[0]`) // code de la commande
+    message.channel.send("un exemple...!" + ` ${args[0]}`) // code de la commande
 }
 module.exports.help = {
     name: "exemple2", // nom de la commande
