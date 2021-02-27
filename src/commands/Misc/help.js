@@ -4,11 +4,14 @@ module.exports.run = (client, message, args) => {
     const embed = new MessageEmbed()
     .setColor(Color)
     .setDescription([
-        "**Giveaway**",
+        "**Misc**",
         "`start`, `reroll`",
         "\u200b",
         "**Utile**",
-        "`help`"
+        "`help`",
+        "\u200b",
+        "**Exemple**",
+        "`exemple1`, `exemple2`"
     ])
     message.channel.send(embed)
 }
