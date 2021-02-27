@@ -1,2 +1,2 @@
 # giveaway-bot
-Un code de bot giveaway sans timer mais performant et travaillé
+J'ai décidé de laisser ce code de giveaway pour ceux qui veulent faire des giveaways très facilement sans se casser la tête. 
