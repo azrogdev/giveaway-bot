@@ -48,10 +48,10 @@ GiveawayChannel.send("🎉 **GIVEAWAY** 🎉").then((message) => {
         if(idx > -1){
             array.push(winner)
             array.pop()
-            console.log(array)
+            
         } else {
             array.push(winner)
-            console.log(array)
+           
         }
         
         const embed2 = new MessageEmbed()
